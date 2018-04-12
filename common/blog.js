@@ -1,20 +1,7 @@
 const Blog = Vue.component ('Blog', {
   data: function () {
-    return  rowData =[]
+    return {}
   },
-    //  mounted () {
-    //   axios
-    //     .get('https://raw.githubusercontent.com/ValeriaNARDET/links/master/database.json')
-    //     .then(response => {
-    //       this.rowData = response.data
-    //       alert(rowData)
-    //     })
-    //     .catch(error => {
-    //       console.log(error)
-    //       this.errored = true
-    //     })
-    //     .finally(() => this.loading = false)
-    // },
   template: `
     <v-content>
       <section>
