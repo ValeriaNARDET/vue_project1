@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EVA photo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+
+<body>
+   <div id="app">
+     <v-app light>
+          <v-container grid-list-xl class="top-margin-menu">
+            <v-layout row wrap justify-center>
+              <v-flex xs12 sm4>
+              	 <v-toolbar-title v-text="title"></v-toolbar-title>
+              </v-flex>
+  		    <v-flex xs3 sm2 xl2 class="menu" v-for="(m, i) in menuItems" :key="`3${m}`">
+  		      <v-card dark color="blue lighten-3">
+  		        <v-card-actions class="px-0">
+          		  <router-link class="menuItemSize"  v-text="m" 
+             			  :id="m" :key="m"
+             			  :to='{ name: m, params: { id: m } }'>
+         				</router-link>
+  		        </v-card-actions>
+  		      </v-card>
+  		    </v-flex>
+            </v-layout>
+          </v-container>
+  				<router-view></router-view> 
+      <v-content>
+        <v-footer class="blue darken-2 footer">
+        	<i>With love from Evgenia Venger</i>
+        </v-footer>
+      </v-content>
+    </v-app>
+   </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/0.1.13/vue-resource.min.js"></script>
+  <script src='https://unpkg.com/vue-router/dist/vue-router.js'></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script src="common/blog.js"></script>
+  <script src="common/photoalbumList.js"></script>
+  <script src="common/phtoalbums.js"></script>
+  <script src="common/portfolio.js"></script>
+  <script src="common/info.js"></script>
+  <script src="common/contacts.js"></script>
+  <script src="common/routerInstance.js"></script>
+  <script src="common/vueInstance.js"></script>
+
+</body>
+</html>
