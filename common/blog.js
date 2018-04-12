@@ -1,7 +1,4 @@
 const Blog = Vue.component ('Blog', {
-  data: function () {
-    return {}
-  },
   template: `
     <v-content>
       <section>
