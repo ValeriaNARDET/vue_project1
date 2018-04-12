@@ -17,7 +17,9 @@
   this.$http.get ( this.sourceURL )
       .then ( response => {
          this.rowData = response.body
-         console.log ( this.rowData )
+   for (i=0; i < this.rowData.length; i++) {
+     console.log ( this.rowData.albumName )
+   }
       })
       .catch ( err => {
          console.log ( "Ошибка доступа к файлу: " + this.sourceURL)
