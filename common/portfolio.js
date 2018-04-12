@@ -2,7 +2,7 @@ const Portfolio = Vue.component ('Portfolio', {
   props: ['rowData'],
   methods: {
     onChooseAlbum: function(){
-
+      return null
     }
   },
   template: `
