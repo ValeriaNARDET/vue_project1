@@ -17,7 +17,7 @@
   this.$http.get ( this.sourceURL )
       .then ( response => {
          this.rowData = response.data
-         console.log (  this.rowData )
+         console.log (  rowData )
       })
       .catch ( err => {
          console.log ( "Ошибка доступа к файлу: " + this.sourceURL)
