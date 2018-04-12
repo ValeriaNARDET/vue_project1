@@ -34,8 +34,11 @@ const Portfolio = Vue.component ('Portfolio', {
     <v-navigation-drawer permanent>
     <v-list dense class="pt-0">
       </div>
+       <div v-for="(item, index) in rowData"  :albums="rowData" @click="selectPhotoalbum">
+        <p v-html="item.albumName" key={index}></p>
+        photos
+      </div>
       photos
-      <router-link to='/художественная литература/другое'>123</router-link>
       </div>
     </v-list>
   </v-navigation-drawer> 
