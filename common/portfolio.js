@@ -32,11 +32,19 @@ const Portfolio = Vue.component ('Portfolio', {
 </v-flex>
 <v-flex> 
   <div class="helloo" >
-
+   <div v-for="(item, index) in rowData"  :albums="rowData" @click="selectPhotoalbum">
+        <p v-html="item.albumName" key={index}></p>
+        photos
+      </div>
   </div>
 </v-flex>
 </v-layout>
-
+       <div v-for="item in rowData" :album="rowData">
+         <p v-html="item.albumName"></p>
+         <div v-for="url in item.urls">
+           <img :src="url" height="300px">
+         </div>
+       </div>
       </section>
     </v-content>
   `
