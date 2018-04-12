@@ -1,10 +1,6 @@
 const Portfolio = Vue.component ('Portfolio', {
   props: ['rowData'],
-  methods: {
-    onChooseAlbum: function(){
-      return null
-    }
-  },
+
   template: `
     <v-content>
       <section>
@@ -27,10 +23,10 @@ const Portfolio = Vue.component ('Portfolio', {
     <v-navigation-drawer permanent>
     <v-list dense class="pt-0">
       </div v-for="album in rowData" :album="rowData">
-        <div v-on:click="onChooseAlbum">
+
           <h4 v-html="album.albumName"></h4>
           <img :src="album.urls[0]" height="100px">
-        </div>
+
       photos
       </div>
     </v-list>
