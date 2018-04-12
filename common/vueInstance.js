@@ -21,7 +21,7 @@
      //console.log ( i.albumName )
    //};
    for (key in  this.rowData) {
-     console.log ( key.albumName )
+     console.log ( key )
    }
       })
       .catch ( err => {
