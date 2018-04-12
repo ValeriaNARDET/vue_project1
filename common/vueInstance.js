@@ -16,9 +16,8 @@
   created: function () {
   this.$http.get ( this.sourceURL )
       .then ( response => {
-         this.rowData = response.body
-var copr = JSON.parse(response.body)
-         console.log ( copr)
+         this.rowData = JSON.parse(response.body)
+         console.log ( "hi" )
    
       })
       .catch ( err => {
