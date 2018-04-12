@@ -11,7 +11,7 @@ const router = new VueRouter({
       path: '/:id',
       name: 'Portfolio',
       component: Portfolio,
-      props: true,
+      props:  ["albums"],
       // children: [,
       //   { 
       //     path: '/:name', 
