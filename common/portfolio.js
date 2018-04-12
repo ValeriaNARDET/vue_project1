@@ -1,8 +1,9 @@
 const Portfolio = Vue.component ('Portfolio', {
-  props:["albums"],
+  props: ["albums"],
   data: {function () {
     return {
       currentData: false
+      }
     }
   },
   methods: {
@@ -52,6 +53,5 @@ const Portfolio = Vue.component ('Portfolio', {
 
       </section>
     </v-content>
-  `,
-  // components: 
+  `
 });
