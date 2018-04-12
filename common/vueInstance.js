@@ -18,11 +18,8 @@
       .then ( response => {
          this.rowData = response.body
    for (i=0; i < this.rowData.length; i++) {
-     console.log ( this.rowData[i].albumName )
+     console.log ( this.rowData[i] )
    };
-//    for (key in  rowData) {
-//      console.log ( key )
-//    }
       })
       .catch ( err => {
          console.log ( "Ошибка доступа к файлу: " + this.sourceURL)
