@@ -1,29 +1,10 @@
 const Portfolio = Vue.component ('Portfolio', {
-  props: ['id'],
-  data: function () {
-    return {  
-      list: null,
-      drawer:  false,
-      rowData: [],
-      sourceURL:"https://raw.githubusercontent.com/ValeriaNARDET/links/master/database.json"
+  props: ['rowData'],
+  methods: {
+    onChooseAlbum: function(){
+
     }
   },
-  // methods: {
-  //   loadJSON: function () {
-  //     this.$http.get( this.sourceURL ).then (response => {
-  //                       // response.data
-  //                  this.rowData = JSON.parse(response.data);
-  //                       console.log (response.body)
-
-  //                   }, response => {
-  //                       console.log ("Ошибка доступа к файлу: " + this.sourceURL)
-  //     })
-  //   }
-  // },
-  // mounted: { function () {
-  //     this.loadJSON()
-  //   }
-  // },
   template: `
     <v-content>
       <section>
@@ -41,13 +22,15 @@ const Portfolio = Vue.component ('Portfolio', {
           </v-layout>
         </v-parallax>   
 
-
-
  <v-layout align-start justify-space-between>
    <v-flex xs11 sm4 xl3 v-if="drawer">
     <v-navigation-drawer permanent>
     <v-list dense class="pt-0">
-      </div>
+      </div v-for="album in rowData" :album="rowData">
+        <div v-on:click="onChooseAlbum">
+          <h4 v-html="album.albumName"></h4>
+          <img :src="album.urls[0]" height="100px">
+        </div>
       photos
       </div>
     </v-list>
@@ -58,7 +41,7 @@ const Portfolio = Vue.component ('Portfolio', {
     <div  v-for="item in rowData" :album="rowData">
           <p v-html="item.albumName"></p>
          <div v-for="url in item.urls">
-          <img :src="url" height="100px">
+          <img :src="url" height="300px">
          </div>
     </div>
 </v-flex>
