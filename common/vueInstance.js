@@ -20,7 +20,7 @@
    //for (i=0; i < this.rowData.length; i++) {
      //console.log ( i.albumName )
    //};
-   for (key in  this.rowData) {
+   for (key in  rowData) {
      console.log ( key )
    }
       })
