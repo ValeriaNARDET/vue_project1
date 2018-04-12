@@ -34,8 +34,8 @@ const Portfolio = Vue.component ('Portfolio', {
     <v-navigation-drawer permanent>
     <v-list dense class="pt-0">
       </div>
-       <div v-for="(item, index) in rowData"  :albums="rowData" @click="selectPhotoalbum">
-        <p v-html="item.albumName" key={index}></p>
+      
+
         photos
       </div>
       photos
@@ -45,12 +45,8 @@ const Portfolio = Vue.component ('Portfolio', {
 </v-flex>
 <v-flex> 
   <div class="helloo">hello</div>
-    <div  v-for="item in rowData" :album="rowData">
-          <p v-html="item.albumName"></p>
-         <div v-for="url in item.urls">
-          <img :src="url" height="100px">
-         </div>
-    </div>
+ 
+
 </v-flex>
 </v-layout>
 
