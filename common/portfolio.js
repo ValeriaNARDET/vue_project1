@@ -1,11 +1,5 @@
 const Portfolio = Vue.component ('Portfolio', {
   props: ["albums"],
-  data: {function () {
-    return {
-      currentData: false
-      }
-    }
-  },
   methods: {
     selectPhotoalbum: function ( event ) {
       this.$parent.$emit ( 'albumSelect', event.target.innerHTML.trim() )
