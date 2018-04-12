@@ -32,7 +32,7 @@ const Portfolio = Vue.component ('Portfolio', {
    <v-flex xs11 sm4 xl3 v-if="drawer">
     <v-navigation-drawer permanent>
     <v-list dense class="pt-0">
-      </div v-for="(item, index) in rowData"  :albums="rowData" @click="selectPhotoalbum">
+      <div v-for="(item, index) in rowData"  :albums="rowData" @click="selectPhotoalbum">
         <p v-html="item.albumName" key={index}></p>
         photos
       </div>
