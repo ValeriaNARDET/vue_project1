@@ -3,7 +3,6 @@ const Portfolio = Vue.component ('Portfolio', {
   data: {function () {
     return {
       currentData: false
-      }
     }
   },
   methods: {
