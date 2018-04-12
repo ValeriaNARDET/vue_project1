@@ -9,18 +9,18 @@
           Blog: "Blog",
           Portfolio: "Portfolio",
           Info: "Info",
-          Contacts: "Contacts",
-       },
+          Contacts: "Contacts"
+       }
       }
     },
   created: function () {
   this.$http.get ( this.sourceURL )
       .then ( response => {
-   this.rowData = response.data
-   console.log (  response.data )
+         this.rowData = response.data
+         console.log (  response.data )
       })
       .catch ( err => {
-    console.log ( "Ошибка доступа к файлу: " + this.sourceURL)
+         console.log ( "Ошибка доступа к файлу: " + this.sourceURL)
       })
   },
 
