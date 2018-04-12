@@ -18,7 +18,7 @@
       .then ( response => {
          this.rowData = response.body
    for (i=0; i < this.rowData.length; i++) {
-     console.log ( this.rowData.albumName )
+     console.log ( i.albumName )
    }
       })
       .catch ( err => {
