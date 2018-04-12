@@ -1,7 +1,4 @@
 const Contacts = Vue.component ('Contacts', {
-  data: function () {
-    return {}
-  },
   template: `
     <v-content>
       <section>
