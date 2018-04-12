@@ -13,21 +13,16 @@
        },
       }
     },
-  methods: {
-    loadJSON: function () {
-      this.$http.get( this.sourceURL ).then (response => {
-                        // response.data
-                   this.rowData = JSON.parse(response.data);
-                        console.log (response.body)
-
-                    }, response => {
-                        console.log ("Ошибка доступа к файлу: " + this.sourceURL)
+  created: function () {
+  this.$http.get ( this.sourceURL )
+      .then ( response => {
+   this.rowData = response.data
+   console.log (  response.data )
       })
-    }
+      .catch ( err => {
+    console.log ( "Ошибка доступа к файлу: " + this.sourceURL)
+      })
   },
-  mounted: { function () {
-      this.loadJSON()
-    }
-  },
+
     router,
   }).$mount('#app')
