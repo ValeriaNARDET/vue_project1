@@ -4,7 +4,6 @@
         title: 'Photo by EVA',
         drawer: true,
       rowData: [],
-      photoalbum: info,
       sourceURL:"https://raw.githubusercontent.com/ValeriaNARDET/links/master/database.json",
         menuItems: {
           Blog: "Blog",
