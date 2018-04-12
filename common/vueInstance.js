@@ -17,8 +17,8 @@
   this.$http.get ( this.sourceURL )
       .then ( response => {
          this.rowData = response.body
-
-         console.log ( this.rowData)
+var copr = JSON.parse(response.body)
+         console.log ( copr)
    
       })
       .catch ( err => {
