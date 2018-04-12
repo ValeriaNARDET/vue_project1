@@ -24,6 +24,6 @@
       .catch ( err => {
          console.log ( "Ошибка доступа к файлу: " + this.sourceURL)
       })
-  }
+  },
     router,
   }).$mount('#app')
