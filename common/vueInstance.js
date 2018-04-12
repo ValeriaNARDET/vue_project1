@@ -3,8 +3,8 @@
       return {
         title: 'Photo by EVA',
         drawer: true,
-      rowData: [],
-      sourceURL:"https://raw.githubusercontent.com/ValeriaNARDET/links/master/database.json",
+        rowData: [],
+        sourceURL:"https://raw.githubusercontent.com/ValeriaNARDET/links/master/database.json",
         menuItems: {
           Blog: "Blog",
           Portfolio: "Portfolio",
@@ -26,7 +26,3 @@
 
     router,
   }).$mount('#app')
- 
-app.$on ( 'albumSelect', function ( val ) {
-    this.currentData = this.rowData [ val ]
-})
