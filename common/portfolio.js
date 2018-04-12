@@ -1,5 +1,4 @@
 const Portfolio = Vue.component ('Portfolio', {
-  props: ['rowData'],
 
   template: `
     <v-content>
@@ -22,11 +21,7 @@ const Portfolio = Vue.component ('Portfolio', {
    <v-flex xs11 sm4 xl3 v-if="drawer">
     <v-navigation-drawer permanent>
     <v-list dense class="pt-0">
-      </div v-for="album in rowData" :album="rowData">
-
-          <h4 v-html="album.albumName"></h4>
-          <img :src="album.urls[0]" height="100px">
-
+      </div>
       photos
       </div>
     </v-list>
